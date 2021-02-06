@@ -1,19 +1,12 @@
-// C++ program to find combinations from n 
-// arrays such that one element from each 
-// array is present 
+
 #include <bits/stdc++.h> 
 
 using namespace std; 
 
-// function to print combinations that contain 
-// one element from each of the given arrays 
 void print(vector<vector<int> >& arr) 
 { 
 	// number of arrays 
 	int n = arr.size(); 
-
-	// to keep track of next element in each of 
-	// the n arrays 
 	int* indices = new int[n]; 
 
 	// initialize with first element's index 
@@ -21,8 +14,6 @@ void print(vector<vector<int> >& arr)
 		indices[i] = 0; 
 
 	while (1) { 
-
-		// print current combination 
 		for (int i = 0; i < n; i++) 
 			cout << arr[i][indices[i]] << " "; 
 		cout << endl; 
@@ -51,8 +42,6 @@ void print(vector<vector<int> >& arr)
 			indices[i] = 0; 
 	} 
 } 
-
-// driver function to test above function 
 int main() 
 { 
 	// initializing a vector with 3 empty vectors 
